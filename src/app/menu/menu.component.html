@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Our specialties</h1>
+    <hr>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <div *ngFor="let menu of menu; index as id" >
+
+
+            <div class="card" style="width: 18rem; border: 2px solid rgb(8, 8, 8)" >
+                <img class="card" src="{{menu.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <hr>
+                    <h5 class="card-title">{{menu.name}}</h5>
+                    <hr>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                        <hr>
+                        <p class="card-text">€{{ menu.price}}</p>
+                    
+                
+                
+                </div>
+                <a class="btn btn-success" routerLink="/menu/{{ id }}">Details</a>
+                <p *ngIf="menu.availability; else notAvailable" class="btn btn-primary" (click)="addToCart(menu)">Order</p>
+                <ng-template #notAvailable><p style="color: red; font-weight: bold ;">This is not available!</p></ng-template>
+                  
+            
+                   
+            </div>
+        </div>
+    </div>

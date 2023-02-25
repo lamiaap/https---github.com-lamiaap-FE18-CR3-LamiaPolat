@@ -1,0 +1,15 @@
+p{
+    font-size: large;
+
+}
+
+h1{
+   
+    font-family: 'Mr Dafoe', cursive;
+
+}
+#total, #items {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+}
